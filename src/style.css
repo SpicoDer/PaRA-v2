@@ -27,7 +27,7 @@
 
 @layer utilities {
   .sticky-nav {
-    @apply fixed left-1/2 top-0 z-10 w-full -translate-x-1/2;
+    @apply fixed left-1/2 top-0 w-full -translate-x-1/2;
   }
 
   .icon {
