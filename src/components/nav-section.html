@@ -1,10 +1,10 @@
 <!-- Navigation Bar -->
 <nav>
-  <div class="nav flex items-center justify-between">
+  <div class="nav sticky-nav z-10 flex items-center justify-between">
     <!-- Logo -->
-    <a href="/" class="text-3xl font-bold">PaRA</a>
+    <a href="/" class="logo text-3xl font-bold">PaRA</a>
     <!-- Nav Links -->
-    <div class="hidden text-lg text-txt-dark lg:block">
+    <div class="hidden text-lg font-medium text-txt-dark lg:block">
       <ul class="flex justify-between gap-4">
         <li class="group">
           <a class="group-hover:text-prim-400" href="/">Research</a>
@@ -18,12 +18,14 @@
       </ul>
     </div>
     <!-- Sign in/up -->
-    <div class="hidden items-center gap-4 text-lg text-txt-dark lg:flex">
+    <div
+      class="hidden items-center gap-4 text-lg font-medium text-txt-dark lg:flex"
+    >
       <a href="/" class="hover:text-prim-400">Sign in</a>
       <a href="/" class="btn rounded-lg">Sign up</a>
     </div>
     <!-- Menu btn -->
-    <div class="menu-btn lg:hidden" data-open="true">
+    <div class="menu-btn lg:hidden">
       <div class="top bg-txt-dark"></div>
       <div class="mid bg-txt-dark"></div>
       <div class="bot bg-txt-dark"></div>
