@@ -4,14 +4,14 @@
 
 @layer base {
   h1 {
-    @apply text-center text-4xl font-bold uppercase;
+    @apply text-center text-4xl uppercase;
   }
   h2 {
-    @apply text-center text-3xl font-bold uppercase;
+    @apply text-center text-3xl uppercase;
   }
 
   h3 {
-    @apply text-center text-2xl font-bold uppercase;
+    @apply text-center text-2xl uppercase;
   }
 
   p {
