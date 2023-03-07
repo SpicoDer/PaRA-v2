@@ -20,9 +20,17 @@ menuBtn.addEventListener('click', () => {
 
 // Scrolling effect for sticky nav bar
 const logo = document.querySelector('.logo');
+let rect = document.querySelector('header').getBoundingClientRect();
+
+// Remove sticky nav on lg screen
+const removeSticky = function () {
+  if (rect.width > 996) nav.classList.remove('sticky-nav');
+};
+
+removeSticky();
 
 window.onscroll = function () {
-  let rect = document.querySelector('header').getBoundingClientRect();
+  rect = document.querySelector('header').getBoundingClientRect();
 
   if (rect.width < 996) {
     nav.classList.add('sticky-nav');
@@ -39,8 +47,7 @@ window.onscroll = function () {
       menu.classList.remove('enable');
       menuBtn.removeAttribute('data-open');
     }
-  } else {
-    // Remove sticky nav on lg screen
-    nav.classList.remove('sticky-nav');
   }
+
+  removeSticky();
 };
