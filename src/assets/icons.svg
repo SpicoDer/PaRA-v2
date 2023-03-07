@@ -1,0 +1,56 @@
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="menu-outline">
+    <title>Menu</title>
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="time-outline">
+    <title>Time</title>
+    <path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path>
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 128v144h96"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="shield-checkmark-outline">
+    <title>Shield Checkmark</title>
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M336 176L225.2 304 176 255.8"></path>
+    <path d="M463.1 112.37C373.68 96.33 336.71 84.45 256 48c-80.71 36.45-117.68 48.33-207.1 64.37C32.7 369.13 240.58 457.79 256 464c15.42-6.21 223.3-94.87 207.1-351.63z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="checkmark-done-outline">
+    <title>Checkmark Done</title>
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M464 128L240 384l-96-96M144 384l-96-96M368 128L232 284"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="close-outline">
+    <title>Close</title>
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify" preserveAspectRatio="xMidYMid meet" version="1.0" viewBox="0 0 187.5 187.499992" id="icon-light">
+    <defs>
+      <clipPath id="49d1d0594f">
+        <path d="M 6.203125 6.203125 L 180.953125 6.203125 L 180.953125 180.953125 L 6.203125 180.953125 Z M 6.203125 6.203125 " clip-rule="nonzero"></path>
+      </clipPath>
+    </defs>
+    <g clip-path="url(#49d1d0594f)">
+      <path stroke-linecap="butt" transform="matrix(1.508788, 0, 0, 1.508788, 6.246949, 6.246945)" fill-opacity="1" fill-rule="evenodd" stroke-linejoin="miter" d="M 57.930857 0.0382705 C 89.816959 0.0382705 115.823446 26.044758 115.823446 57.93086 C 115.823446 89.816962 89.816959 115.823449 57.930857 115.823449 C 26.044755 115.823449 0.0382678 89.816962 0.0382678 57.93086 C 0.0382678 26.044758 26.044755 0.0382705 57.930857 0.0382705 Z M 57.930857 7.756074 C 85.565824 7.756074 108.105643 30.295893 108.105643 57.93086 C 108.105643 85.565827 85.565824 108.105645 57.930857 108.105645 C 30.29589 108.105645 7.756072 85.565827 7.756072 57.93086 C 7.756072 30.295893 30.29589 7.756074 57.930857 7.756074 Z M 57.930857 7.756074 " stroke="#000000" stroke-width="0.076" stroke-opacity="1" stroke-miterlimit="4"></path>
+    </g>
+    <path stroke-linecap="butt" transform="matrix(1.508788, 0, 0, 1.508788, 6.246949, 6.246945)" fill-opacity="1" fill-rule="evenodd" stroke-linejoin="miter" d="M 48.227292 24.310129 C 50.394283 24.310129 52.167747 26.083593 52.167747 28.253173 L 52.167747 58.011119 C 52.167747 58.583287 52.576809 59.082964 53.156744 59.082964 C 53.739269 59.082964 54.145742 58.583287 54.145742 58.00853 L 54.145742 22.583267 C 54.145742 20.413686 55.919205 18.640223 58.088786 18.640223 C 60.255777 18.640223 62.029241 20.413686 62.029241 22.583267 L 62.029241 57.992996 C 62.029241 58.578109 62.386523 59.082964 63.020828 59.082964 C 63.616297 59.082964 64.007236 58.562575 64.007236 57.974873 L 64.007236 25.092006 C 64.007236 22.922426 65.7807 21.151551 67.947691 21.151551 C 70.114683 21.151551 71.888146 22.922426 71.888146 25.092006 L 71.888146 58.021475 C 71.888146 58.591054 72.304975 59.085553 72.879733 59.085553 C 73.45449 59.085553 73.86873 58.578109 73.86873 58.000763 L 73.86873 34.073241 C 73.86873 32.165149 75.318569 30.601394 77.092033 30.601394 C 78.868086 30.601394 80.317925 32.165149 80.317925 34.073241 L 80.317925 80.447377 C 80.317925 86.407251 75.450608 91.282335 69.503679 91.282335 L 44.214344 91.282335 C 39.983921 91.282335 35.815634 89.268094 33.44929 83.870033 L 20.480998 54.275194 C 20.480998 54.275194 20.739898 54.106909 21.752196 53.578754 C 25.304301 51.717264 29.273236 52.188462 31.137314 55.719855 L 38.839584 70.301093 C 40.825346 74.093976 44.268713 73.413069 44.268713 68.613066 L 44.268713 58.101734 L 44.286836 58.101734 L 44.286836 28.253173 C 44.286836 26.086182 46.0603 24.312718 48.227292 24.312718 Z M 48.227292 24.310129 " stroke="#000000" stroke-width="0.076" stroke-opacity="1" stroke-miterlimit="4"></path>
+  </symbol>
+</svg>
+
+<!-- 
+<svg class="icon">
+  <use xlink:href="#menu-outline"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#time-outline"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#shield-checkmark-outline"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#checkmark-done-outline"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#close-outline"></use>
+</svg> 
+<svg class="icon">
+  <use xlink:href="#icon-light"></use>
+</svg>
+-->
