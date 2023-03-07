@@ -27,7 +27,7 @@
 
 @layer utilities {
   .icon {
-    @apply h-24 w-24;
+    @apply h-12 w-12 text-prim-400;
   }
 
   .icon-circle {
