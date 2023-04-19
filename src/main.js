@@ -36,10 +36,12 @@ window.onscroll = function () {
     nav.classList.add('sticky-nav');
     nav.classList.add('bg-prim-400');
     logo.classList.add('text-white');
+    logo.classList.remove('text-prim-400');
 
     if (window.scrollY < 1) {
       nav.classList.remove('bg-prim-400');
       logo.classList.remove('text-white');
+      logo.classList.add('text-prim-400');
     }
 
     if (window.scrollY > rect.height) {
