@@ -136,12 +136,21 @@
     <main>
       <!-- Map -->
       <section class="bg-prim-400">
-        <div class="map-section">
+        <div class="map-section py-20">
           <h2 class="text-4xl font-bold text-white">Live Map</h2>
           <p class="font-meduim text-xl text-white">
             Check below the current Jeepney PaRA travelling.
           </p>
-          <div id="map"></div>
+          <div id="map" class="container mx-auto my-4 mt-12 h-[400px] bg-white">
+            <div class="grid h-full w-full place-items-center bg-white">
+              <div class="space-y-4">
+                <svg class="icon mx-auto h-20 w-20 animate-spin text-prim-400">
+                  <use xlink:href="./assets/icons.svg#spinner"></use>
+                </svg>
+                <p class="text-lg text-txt-light">Loading...</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

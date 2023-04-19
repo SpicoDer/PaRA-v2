@@ -54,7 +54,16 @@ window.onscroll = function () {
 
 // MAP
 
+// Load the Bing Maps API script
+const script = document.createElement('script');
+script.type = 'text/javascript';
+script.async = true;
+script.defer = true;
+script.src = `https://www.bing.com/api/maps/mapcontrol?callback=initMap`;
+document.body.appendChild(script);
+
 // fetch coordinates of puvs1
+
 let puvCoords;
 
 const fetchPuvCoordinates = async function () {
@@ -70,6 +79,7 @@ const fetchPuvCoordinates = async function () {
     throw new Error();
   }
 };
+
 // callback function of the bing map api
 window.initMap = async () => {
   await fetchPuvCoordinates();
@@ -77,7 +87,7 @@ window.initMap = async () => {
   // initialize map
   const map = new Microsoft.Maps.Map(document.getElementById('map'), {
     credentials:
-      'AiPKZ0UNBJO5u_ZL2cGw2YDZLiZYiZIiOfI_wBzlfGG1RFcvl63BsHndlXFihfGO',
+      'Ahv3Zvk1SVk6GnBG1aXRQ7Evvj4HGsaWqhGuotO2RmM-sZ-6izgAmFknp2h4sPcS',
     center: new Microsoft.Maps.Location(
       puvCoords.latitude,
       puvCoords.longitude
@@ -115,7 +125,7 @@ window.initMap = async () => {
 
   // pin options for puv pin
   const puvPinOptions = {
-    icon: 'images/poi_custom.png',
+    icon: 'https://www.bingmapsportal.com/Content/images/poi_custom.png',
     anchor: new Microsoft.Maps.Point(12, 39),
     title: 'PUV',
   };
@@ -126,6 +136,7 @@ window.initMap = async () => {
     puvPin = createPinInstance(coords, puvPinOptions);
     puvPinlayer.clear();
     puvPinlayer.add(puvPin);
+    map.setView({ center: puvPin.getLocation(), zoom: 16 });
   };
 
   // add puv pin on start
