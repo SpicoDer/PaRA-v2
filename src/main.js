@@ -36,12 +36,10 @@ window.onscroll = function () {
     nav.classList.add('sticky-nav');
     nav.classList.add('bg-prim-400');
     logo.classList.add('text-white');
-    logo.classList.remove('text-prim-400');
 
     if (window.scrollY < 1) {
       nav.classList.remove('bg-prim-400');
       logo.classList.remove('text-white');
-      logo.classList.add('text-prim-400');
     }
 
     if (window.scrollY > rect.height) {
@@ -52,4 +50,92 @@ window.onscroll = function () {
   }
 
   removeSticky();
+};
+
+// MAP
+
+// fetch coordinates of puvs1
+let puvCoords;
+
+const fetchPuvCoordinates = async function () {
+  try {
+    const response = await fetch(
+      'https://jparatest.000webhostapp.com/location/read.php'
+    );
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+    const fetchCoords = await response.json();
+    puvCoords = fetchCoords.coordinates;
+  } catch {
+    throw new Error();
+  }
+};
+// callback function of the bing map api
+window.initMap = async () => {
+  await fetchPuvCoordinates();
+
+  // initialize map
+  const map = new Microsoft.Maps.Map(document.getElementById('map'), {
+    credentials:
+      'AiPKZ0UNBJO5u_ZL2cGw2YDZLiZYiZIiOfI_wBzlfGG1RFcvl63BsHndlXFihfGO',
+    center: new Microsoft.Maps.Location(
+      puvCoords.latitude,
+      puvCoords.longitude
+    ),
+    zoom: 16,
+    enableRotation: true,
+    mapTypeId: Microsoft.Maps.MapTypeId.road,
+    customMapStyle: {
+      elements: {
+        area: { fillColor: '#b6e591' },
+        water: { fillColor: '#75cff0' },
+        tollRoad: { fillColor: '#a964f4', strokeColor: '#a964f4' },
+        arterialRoad: { fillColor: '#ffffff', strokeColor: '#d7dae7' },
+        road: { fillColor: '#ffa35a', strokeColor: '#ff9c4f' },
+        street: { fillColor: '#ffffff', strokeColor: '#ffffff' },
+        transit: { fillColor: '#000000' },
+      },
+      settings: {
+        landColor: '#efe9e1',
+      },
+    },
+  });
+
+  // create layer on map for puv pin
+  const puvPinlayer = new Microsoft.Maps.Layer();
+  map.layers.insertAll([puvPinlayer]);
+
+  // reuseable pin instance
+  const createPinInstance = function ({ latitude, longitude }, pinOptions) {
+    return new Microsoft.Maps.Pushpin(
+      new Microsoft.Maps.Location(latitude, longitude),
+      pinOptions
+    );
+  };
+
+  // pin options for puv pin
+  const puvPinOptions = {
+    icon: 'images/poi_custom.png',
+    anchor: new Microsoft.Maps.Point(12, 39),
+    title: 'PUV',
+  };
+
+  // function to add puv pin on map
+  let puvPin;
+  const addPuvPinOnMap = function (coords) {
+    puvPin = createPinInstance(coords, puvPinOptions);
+    puvPinlayer.clear();
+    puvPinlayer.add(puvPin);
+  };
+
+  // add puv pin on start
+  addPuvPinOnMap(puvCoords);
+
+  // fetch coodinates and update location of pin in map every x secs
+  setInterval(async () => {
+    await fetchPuvCoordinates(); // fetch new coordinates of puv
+
+    // re-render the position of pin on map
+    addPuvPinOnMap(puvCoords);
+  }, 15_000);
 };
